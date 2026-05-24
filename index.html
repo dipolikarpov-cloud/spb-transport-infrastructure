@@ -2684,50 +2684,41 @@
                 last.style.display = "none";
             }
         });
-        var overlaysTree = [
-            {label: '<img src="legend/project_htmlspb_popul_houses_23.png" /> project_html — spb_popul_houses', layer: cluster_project_htmlspb_popul_houses_23},
-            {label: 'project_html — parking_space<br /><table><tr><td style="text-align: center;"><img src="legend/project_htmlparking_space_22_Городская0.png" /></td><td>Городская</td></tr><tr><td style="text-align: center;"><img src="legend/project_htmlparking_space_22_Зонаплатнойпарковки1.png" /></td><td>Зона платной парковки</td></tr><tr><td style="text-align: center;"><img src="legend/project_htmlparking_space_22_Перехватывающая2.png" /></td><td>Перехватывающая</td></tr></table>', layer: cluster_project_htmlparking_space_22},
-            {label: 'project_html — ticket_sales_point_spb<br /><table><tr><td style="text-align: center;"><img src="legend/project_htmlticket_sales_point_spb_21_Всевиды0.png" /></td><td>Все виды</td></tr><tr><td style="text-align: center;"><img src="legend/project_htmlticket_sales_point_spb_21_Наземныйтранспорт1.png" /></td><td>Наземный транспорт</td></tr><tr><td style="text-align: center;"><img src="legend/project_htmlticket_sales_point_spb_21_ТолькоМесячныйименнойкомбинированныйтрамвайтроллейбусавтобусбилетдлястудентов2.png" /></td><td>Только «Месячный именной комбинированный (трамвай, троллейбус, автобус) билет для студентов»</td></tr></table>', layer: cluster_project_htmlticket_sales_point_spb_21},
-            {label: '<img src="legend/project_htmlrailway_station_spb_20.png" /> project_html — railway_station_spb', layer: layer_project_htmlrailway_station_spb_20},
-            {label: 'project_html — transport_depot_spb<br /><table><tr><td style="text-align: center;"><img src="legend/project_htmltransport_depot_spb_19_Автобусный0.png" /></td><td>Автобусный</td></tr><tr><td style="text-align: center;"><img src="legend/project_htmltransport_depot_spb_19_Трамвайный1.png" /></td><td>Трамвайный</td></tr><tr><td style="text-align: center;"><img src="legend/project_htmltransport_depot_spb_19_ТрамвайныйТроллейбусный2.png" /></td><td>Трамвайный/Троллейбусный</td></tr><tr><td style="text-align: center;"><img src="legend/project_htmltransport_depot_spb_19_Троллейбусный3.png" /></td><td>Троллейбусный</td></tr></table>', layer: layer_project_htmltransport_depot_spb_19},
-            {label: 'project_html — bus_stop_pop_spb<br /><table><tr><td style="text-align: center;"><img src="legend/project_htmlbus_stop_pop_spb_18_Автобус0.png" /></td><td>Автобус</td></tr><tr><td style="text-align: center;"><img src="legend/project_htmlbus_stop_pop_spb_18_Трамвай1.png" /></td><td>Трамвай</td></tr><tr><td style="text-align: center;"><img src="legend/project_htmlbus_stop_pop_spb_18_Троллейбус2.png" /></td><td>Троллейбус</td></tr></table>', layer: cluster_project_htmlbus_stop_pop_spb_18},
-            {label: 'project_html — railway_centr_station<br /><table><tr><td style="text-align: center;"><img src="legend/project_htmlrailway_centr_station_16_Автобусныйвокзал0.png" /></td><td>Автобусный вокзал</td></tr><tr><td style="text-align: center;"><img src="legend/project_htmlrailway_centr_station_16_Железнодорожныйвокзал1.png" /></td><td>Железнодорожный вокзал</td></tr></table>', layer: layer_project_htmlrailway_centr_station_16},
-            {label: '<img src="legend/project_htmlmetro_spb_15.png" /> project_html — metro_spb', layer: layer_project_htmlmetro_spb_15},
-            {label: 'project_html — bus_routes_spb<br /><table><tr><td style="text-align: center;"><img src="legend/project_htmlbus_routes_spb_14_Автобус0.png" /></td><td>Автобус</td></tr><tr><td style="text-align: center;"><img src="legend/project_htmlbus_routes_spb_14_Трамвай1.png" /></td><td>Трамвай</td></tr><tr><td style="text-align: center;"><img src="legend/project_htmlbus_routes_spb_14_Троллейбус2.png" /></td><td>Троллейбус</td></tr></table>', layer: layer_project_htmlbus_routes_spb_14},
-            {label: 'project_html — metro_lines<br /><table><tr><td style="text-align: center;"><img src="legend/project_htmlmetro_lines_13_КировскоВыборгскаялинияЛиния10.png" /></td><td>Кировско-Выборгская линия (Линия 1)</td></tr><tr><td style="text-align: center;"><img src="legend/project_htmlmetro_lines_13_МосковскоПетроградскаялинияЛиния21.png" /></td><td>Московско-Петроградская линия (Линия 2)</td></tr><tr><td style="text-align: center;"><img src="legend/project_htmlmetro_lines_13_НевскоВасилеостровскаялинияЛиния32.png" /></td><td>Невско-Василеостровская линия (Линия 3)</td></tr><tr><td style="text-align: center;"><img src="legend/project_htmlmetro_lines_13_ЛахтинскоПреображенскаялинияЛиния43.png" /></td><td>Лахтинско-Преображенская линия (Линия 4)</td></tr><tr><td style="text-align: center;"><img src="legend/project_htmlmetro_lines_13_ФрунзенскоПриморскаялинияЛиния54.png" /></td><td>Фрунзенско-Приморская линия (Линия 5)</td></tr><tr><td style="text-align: center;"><img src="legend/project_htmlmetro_lines_13_КрасносельскоКалининскаялиния6линия5.png" /></td><td>Красносельско-Калининская линия (6 линия)</td></tr></table>', layer: layer_project_htmlmetro_lines_13},
-            {label: '<img src="legend/project_htmlrailway_line_spb_12.png" /> project_html — railway_line_spb', layer: layer_project_htmlrailway_line_spb_12},
-            {label: '<img src="legend/project_htmltram_line_spb_11.png" /> project_html — tram_line_spb', layer: layer_project_htmltram_line_spb_11},
-            {label: 'project_html — spb_popul_distribution<br /><table><tr><td style="text-align: center;"><img src="legend/project_htmlspb_popul_distribution_10_045330.png" /></td><td>0 - 4533</td></tr><tr><td style="text-align: center;"><img src="legend/project_htmlspb_popul_distribution_10_4533137521.png" /></td><td>4533 - 13752</td></tr><tr><td style="text-align: center;"><img src="legend/project_htmlspb_popul_distribution_10_13752246542.png" /></td><td>13752 - 24654</td></tr><tr><td style="text-align: center;"><img src="legend/project_htmlspb_popul_distribution_10_24654374083.png" /></td><td>24654 - 37408</td></tr><tr><td style="text-align: center;"><img src="legend/project_htmlspb_popul_distribution_10_37408656594.png" /></td><td>37408 - 65659</td></tr></table>', layer: layer_project_htmlspb_popul_distribution_10},
-            {label: 'project_html — all_stops_distribution<br /><table><tr><td style="text-align: center;"><img src="legend/project_htmlall_stops_distribution_9_180.png" /></td><td>1 - 8</td></tr><tr><td style="text-align: center;"><img src="legend/project_htmlall_stops_distribution_9_8181.png" /></td><td>8 - 18</td></tr><tr><td style="text-align: center;"><img src="legend/project_htmlall_stops_distribution_9_18302.png" /></td><td>18 - 30</td></tr><tr><td style="text-align: center;"><img src="legend/project_htmlall_stops_distribution_9_30423.png" /></td><td>30 - 42</td></tr><tr><td style="text-align: center;"><img src="legend/project_htmlall_stops_distribution_9_42754.png" /></td><td>42 - 75</td></tr></table>', layer: layer_project_htmlall_stops_distribution_9},
-            {label: '<img src="legend/project_htmlmetro_spb_iso_15min_8.png" /> project_html — metro_spb_iso_15min', layer: layer_project_htmlmetro_spb_iso_15min_8},
-            {label: '<img src="legend/project_htmlrailway_spb_iso_15min_7.png" /> project_html — railway_spb_iso_15min', layer: layer_project_htmlrailway_spb_iso_15min_7},
-            {label: '<img src="legend/project_htmlall_buffer500_spb_6.png" /> project_html — all_buffer500_spb', layer: layer_project_htmlall_buffer500_spb_6},
-            {label: '<img src="legend/project_htmlbus_buffer500_spb_5.png" /> project_html — bus_buffer500_spb', layer: layer_project_htmlbus_buffer500_spb_5},
-            {label: '<img src="legend/project_htmltram_buffer500_spb_4.png" /> project_html — tram_buffer500_spb', layer: layer_project_htmltram_buffer500_spb_4},
-            {label: '<img src="legend/project_htmltrol_buffer500_spb_3.png" /> project_html — trol_buffer500_spb', layer: layer_project_htmltrol_buffer500_spb_3},
-            {label: '<img src="legend/project_htmlboundary_petrograd_districts_2.png" /> project_html — boundary_petrograd_districts', layer: layer_project_htmlboundary_petrograd_districts_2},
-            {label: '<img src="legend/project_htmlboundary_petrograd_city_1.png" /> project_html — boundary_petrograd_city', layer: layer_project_htmlboundary_petrograd_city_1},
-            {label: "CartoDB Positron", layer: layer_CartoDBPositron_0, radioGroup: 'bm' },]
-        var lay = L.control.layers.tree(null, overlaysTree,{
-            //namedToggle: true,
-            //selectorBack: false,
-            //closedSymbol: '&#8862; &#x1f5c0;',
-            //openedSymbol: '&#8863; &#x1f5c1;',
-            //collapseAll: 'Collapse all',
-            //expandAll: 'Expand all',
+        // Simple Leaflet layer switcher. This replaces the qgis2web tree control
+        // with a standard checkbox/radio control, so every exported layer can be
+        // turned on and off directly in the web map.
+        var baseMaps = {
+            "CartoDB Positron": layer_CartoDBPositron_0
+        };
+        var overlays = {
+            "Жилые дома": cluster_project_htmlspb_popul_houses_23,
+            "Парковочные места": cluster_project_htmlparking_space_22,
+            "Пункты продажи билетов": cluster_project_htmlticket_sales_point_spb_21,
+            "Ж/д станции": layer_project_htmlrailway_station_spb_20,
+            "Транспортные депо": layer_project_htmltransport_depot_spb_19,
+            "Остановки с населением": cluster_project_htmlbus_stop_pop_spb_18,
+            "Тепловая карта парковок": layer_project_htmlparking_space_heatmap_17,
+            "Ж/д и автовокзалы": layer_project_htmlrailway_centr_station_16,
+            "Станции метро": layer_project_htmlmetro_spb_15,
+            "Маршруты наземного транспорта": layer_project_htmlbus_routes_spb_14,
+            "Линии метро": layer_project_htmlmetro_lines_13,
+            "Ж/д линии": layer_project_htmlrailway_line_spb_12,
+            "Трамвайные линии": layer_project_htmltram_line_spb_11,
+            "Распределение населения": layer_project_htmlspb_popul_distribution_10,
+            "Распределение остановок": layer_project_htmlall_stops_distribution_9,
+            "15 мин до метро": layer_project_htmlmetro_spb_iso_15min_8,
+            "15 мин до ж/д": layer_project_htmlrailway_spb_iso_15min_7,
+            "Буфер 500 м: весь транспорт": layer_project_htmlall_buffer500_spb_6,
+            "Буфер 500 м: автобус": layer_project_htmlbus_buffer500_spb_5,
+            "Буфер 500 м: трамвай": layer_project_htmltram_buffer500_spb_4,
+            "Буфер 500 м: троллейбус": layer_project_htmltrol_buffer500_spb_3,
+            "Районы Петроградского района": layer_project_htmlboundary_petrograd_districts_2,
+            "Граница Санкт-Петербурга": layer_project_htmlboundary_petrograd_city_1
+        };
+        L.control.layers(baseMaps, overlays, {
             collapsed: true,
-        });
-        lay.addTo(map);
+            position: 'topright'
+        }).addTo(map);
         setBounds();
         function geoJson2heat(geojson, weight) {
           return geojson.features.map(function(feature) {
-            return [
-              feature.geometry.coordinates[1],
-              feature.geometry.coordinates[0],
-              feature.properties[weight]
-            ];
-          });
-        }
-        </script>        
-    </body>
-</html>
